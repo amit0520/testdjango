@@ -21,5 +21,25 @@ from django.urls import path, include
 urlpatterns = [
 #    path('', include('cal.urls')),
     path('', include('admin.urls')),
+    path('idb/', include('bktracker.urls')),
     path('admin/', admin.site.urls),
 ]
+
+
+
+# from django.db import models
+#
+# class BKrecords(models.Model):
+#     t1 = models.IntegerField
+#     t2 = models.IntegerField
+#     t3 = models.IntegerField
+#     t4 = models.IntegerField
+#     t5 = models.IntegerField
+#     t6 = models.IntegerField
+#     plantID = models.CharField(max_length=10)
+#     lineID = models.CharField(max_length=10)
+#     timestamp = models.DateTimeField
+#     bkTime = models.IntegerField
+#
+#     class Meta:
+#         db_table = "bk_records"
