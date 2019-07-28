@@ -41,9 +41,12 @@ def idb(request):
     # return HttpResponse("Got One Data***")
     return render(request, "records.html", {'bkValues':CURLValues})
 
-
 #http://www.xyz.com/britanniaService/services.php?RQSTTYPE=1&PLANTID=1&LINEID=1
 # &PRODID=1&BAKETIME=223&T1=366&T2=380&T3=355&T4=367&T5=366&T6=342
 
 #http://127.0.0.1:8000/idb?RQSTTYPE=1&PLANTID=1&LINEID=1&PRODID=1&BAKETIME=223&T1=366&T2=380&T3=355&T4=367&T5=366&T6=342
 #http://127.0.0.1:8000/idb?RQSTTYPE=1&PLANTID=1&LINEID=1&BAKETIME=223&T1=366&T2=380&T3=355&T4=367&T5=366&T6=342
+
+def home(request):
+    records = BKrecords.objects.all()
+    return render(request, "index.html", {'records':records})

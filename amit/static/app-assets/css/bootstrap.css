@@ -1408,7 +1408,8 @@ pre {
   display: block;
   width: 100%;
   min-height: 0%;
-  overflow-x: auto; }
+  overflow-x: auto;
+  overflow-y: auto; }
 
 .table-reflow thead {
   float: left; }

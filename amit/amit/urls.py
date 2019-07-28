@@ -20,7 +20,8 @@ from django.urls import path, include
 # from .url import urlpatterns
 urlpatterns = [
 #    path('', include('cal.urls')),
-    path('', include('admin.urls')),
+#    path('', include('admin.urls')),
+    path('', include('bktracker.urls')),
     path('idb/', include('bktracker.urls')),
     path('admin/', admin.site.urls),
 ]
