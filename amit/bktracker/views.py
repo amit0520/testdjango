@@ -48,5 +48,5 @@ def idb(request):
 #http://127.0.0.1:8000/idb?RQSTTYPE=1&PLANTID=1&LINEID=1&BAKETIME=223&T1=366&T2=380&T3=355&T4=367&T5=366&T6=342
 
 def home(request):
-    records = BKrecords.objects.all()
+    records = BKrecords.objects.all().order_by('-timestamp')[:5]
     return render(request, "index.html", {'records':records})
